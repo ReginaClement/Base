@@ -1,0 +1,44 @@
+rbac:
+  details:
+      #class : CommunicationController
+    - permission: PV_CC_HOME_RO
+      urlmapping:
+        '[/api/v1/communication/templates]': GET
+        '[/api/v1/communication/notified/system]': GET
+        '[/api/v1/communication/events]': GET
+        '[/api/v1/communication/cpis/start]': GET
+        '[/api/v1/communication/event/info]': GET
+        '[/api/v1/communication/filter/events]': GET
+        '[/api/v1/communication/filter/event/eventId]': GET
+        '[/api/v1/communication/alert/interval]': GET
+        '[/api/v1/communication/alert/config]': GET
+        '[/api/v1/communication/alert/interval/update]': GET
+        '[/api/v1/config/datacenter/all]': GET
+        '[/api/v1/communication/update/status]': GET
+    - permission: PV_CC_HOME_RW
+      urlmapping:
+        '[/api/v1/communication/unplanned]': POST
+        '[/api/v1/communication/approve]': POST
+        '[/api/v1/communication/cancel]': POST
+        '[/api/v1/communication/close]': POST
+        '[/api/v1/communication/reject]': POST
+        '[/api/v1/communication/template]': POST
+        '[/api/v1/communication/templates]': GET
+        '[/api/v1/communication/events]': GET
+        '[/api/v1/communication/event]': POST
+        '[/api/v1/communication/alert/interval]': GET
+        '[/api/v1/communication/alert/config]': GET
+        '[/api/v1/communication/alert/interval/update]': GET
+        '[/api/v1/communication/alert/config/update]': POST
+        '[/api/v1/communication/planned]': POST
+        '[/api/v1/communication/freestyle]': POST
+        '[/api/v1/communication/split/event]': POST
+        '[/api/v1/config/system/dynatrace/tag]': PUT
+        '[/api/v1/config/datacenter/all]': GET
+        '[/api/v1/communication/software/create/event]': POST
+        '[/api/v1/communication/software/neo/create/event]': POST
+    - permission: ADMIN_JOBSCHEDULER
+      urlmapping:
+        '[/api/v1/communication/auto/cpis]': GET
+        '[/api/v1/communication/cpis/start]': GET
+        '[/api/v1/communication/update/status]': GET
